@@ -7,6 +7,16 @@
     <title>weather</title>
 </head>
 <style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url(img/back7.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    
     .flex {
         display: flex;
         justify-content: center;
@@ -15,7 +25,6 @@
         font-family: '微軟正黑體';
         background-size: cover;
         background-position: center;
-        height: 100vh;
     }
 
     .weather {
@@ -26,8 +35,8 @@
         padding: 30px 40px 30px;
         height: 500px;
         width: 420px;
-        /* border-radius: 250px 250px 0px 0px;  圓角 */
-        border-radius: 50px 50px 50px 50px;  /* 圓角矩形 */
+        /* border-radius: 250px 250px 0px 0px;  */
+        border-radius: 50px 50px 50px 50px; 
         border-style:outset;
         backdrop-filter: blur(10px);  /* 背景模糊 */
         /* background: transparent;  背景透明 */
@@ -118,7 +127,7 @@
 </style>
 
 <body>
-    <img class="background"  src="img/back7.jpg" alt="">
+    <!-- <img class="background"  src="img/back7.jpg" alt=""> -->
     
     <div class="cloudanimation">
         <img class="cloud" src="img/backcloud.png" alt="">
@@ -170,7 +179,7 @@
     </div>
 </body>
 <script>
-    let weatherUrl = 'https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWA-E42A2A77-4901-4E11-81D8-1C0C3FB12F60'
+    let weatherUrl = 'https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWA-E42A2A77-4901-4E11-81D8-1C0C3FB12F60'
     let weatherAreaSelector = document.querySelector('#weather-area')
     let weatherResult = document.querySelector('#weather-result')
 
